@@ -1,11 +1,12 @@
 COMPLIER=g++
 CFLAGS=-Wall --std=c++11
 BIN_NAME=test
+INCLUDE=.
 
 .PHONY: all clean build test
 
 build:
-	$(COMPLIER) $(CFLAGS) $(INPUT_FILE) -o $(BIN_NAME) 
+	$(COMPLIER) -I$(INCLUDE) $(CFLAGS) $(INPUT_FILE) -o $(BIN_NAME) 
 
 test:
 	./$(BIN_NAME)
