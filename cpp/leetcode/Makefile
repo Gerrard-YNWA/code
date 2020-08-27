@@ -1,5 +1,5 @@
 COMPLIER=g++
-CFLAGS=-Wall --std=c++11
+CFLAGS=-Wall --std=c++11 -fsanitize=address
 BIN_NAME=test
 INCLUDE=.
 
