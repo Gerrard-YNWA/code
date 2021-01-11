@@ -11,10 +11,10 @@ var redisPool *redis.Pool
 
 func newRedisPool() *redis.Pool {
 	return &redis.Pool{
-		MaxIdle:     10,
-		MaxActive:   20,
+		MaxIdle:     10, //max connections in pool
+		MaxActive:   20, //max connections can open, will decrease to MaxIdle, which will cause TIME_WAIT state in `netstat`
 		IdleTimeout: 60 * time.Second,
-		Wait:        true,
+		Wait:        true, //If Wait is true and the pool is at the MaxActive limit, then Get() waits for a connection to be returned to the pool before returning.
 		Dial: func() (redis.Conn, error) {
 			c, err := redis.Dial("tcp", "127.0.0.1:6379")
 			if err != nil {
