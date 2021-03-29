@@ -1,5 +1,6 @@
 #ifndef _TREE_HPP_
 #define _TREE_HPP_
+#include <queue>
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -12,4 +13,22 @@ struct TreeNode {
     }
 };
 
+void FloorPrint(TreeNode *root) {
+    std::queue<TreeNode *> q;
+    if (root != NULL) {
+        q.push(root);
+    }
+
+    while (!q.empty()) {
+        std::cout << q.front()->val << " -> ";
+        if (q.front()->left != NULL) {
+            q.push(q.front()->left);
+        }
+        if (q.front()->right != NULL) {
+            q.push(q.front()->right);
+        }
+        q.pop();
+    }
+    std::cout << std::endl;
+}
 #endif
