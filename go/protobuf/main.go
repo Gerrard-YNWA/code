@@ -5,7 +5,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	tutorial "protobuf/examples/tutorial"
+	tutorial "github.com/Gerrard-YNWA/code/go/protobuf/examples/tutorial"
 )
 
 func main() {
