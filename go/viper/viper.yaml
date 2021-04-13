@@ -1,0 +1,6 @@
+app:
+  name: friut-shop
+  fruits:
+    - apple
+    - cherry
+    - lemon

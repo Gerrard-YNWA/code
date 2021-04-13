@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/Pallinder/go-randomdata v1.2.0
+	github.com/fsnotify/fsnotify v1.4.7
 	github.com/golang/protobuf v1.5.0
 	github.com/gomodule/redigo v1.8.4
 	github.com/gorilla/websocket v1.4.2
@@ -24,3 +25,5 @@ require (
 	gorm.io/driver/mysql v1.0.5
 	gorm.io/gorm v1.21.6
 )
+
+replace google.golang.org/grpc v1.32.0 => google.golang.org/grpc v1.29.1
