@@ -31,4 +31,28 @@ void FloorPrint(TreeNode *root) {
     }
     std::cout << std::endl;
 }
+
+TreeNode *CreateTree(std::vector<int> vec, int start) {
+    if (vec[start] == '#') {
+        return NULL;
+    }
+
+    TreeNode *root = new TreeNode(vec[start]);
+
+    int lnode = 2 * start + 1;
+    int rnode = 2 * start + 2;
+    if (lnode > vec.size() - 1) {
+        root->left = NULL;
+    } else {
+        root->left = CreateTree(vec, lnode);
+    }
+
+    if (rnode > vec.size() - 1) {
+        root->right = NULL;
+    } else {
+        root->right = CreateTree(vec, rnode);
+    }
+
+    return root;
+}
 #endif
