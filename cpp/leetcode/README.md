@@ -1,4 +1,3 @@
 usage:
 ```bash
-make all INPUT_FILE=xxxx.cpp
-```
+make INPUT_FILE=xxxx.cpp
