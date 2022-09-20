@@ -18,7 +18,7 @@ require (
 	github.com/miekg/dns v1.1.48 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/mapstructure v1.3.3 // indirect
-	github.com/moby/moby v20.10.5+incompatible
+	github.com/moby/moby v20.10.18+incompatible
 	github.com/pelletier/go-toml v1.8.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_golang v1.5.1
